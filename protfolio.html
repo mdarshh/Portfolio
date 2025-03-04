@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+   
+    <title>portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'poppins';
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #262424;
+}
+
+
+.header{
+    min-height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    z-index: 99;
+    position: relative;
+    border-bottom: 0.02px solid rgba(128, 128, 128, 0.2);
+}
+.logo{
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.logo a{
+    color: #fff;
+    transition: .6s;
+    font-size: 1.5rem;
+}
+.logo a:hover{
+    color:#28DF99;
+}
+.logo a:hover span{
+    color: #fff;
+}
+
+.logo a span{
+    color: #28DF99;
+
+}
+
+
+.header ul li{
+    display: inline-block;
+    
+}
+
+.header ul li a{
+    margin: 0 25px;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: .6s;
+    position: relative;
+}
+
+.header ul li:hover a{
+    color: #28DF99;
+    text-shadow: 0 0 10px #99F3BD;
+}
+
+.header .fa-bars{
+    font-size: 1.3rem;
+    display: none;
+    color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: #28DF99;
+}
+
+
+
+
+
+.hero,.about{
+    min-height: 650px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    z-index: 1;
+}
+
+.hero .content,.about .content{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.hero .content h4,
+.about .content h4{
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #28DF99;
+    letter-spacing: 6px;
+    font-size: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+
+}
+.hero .content h2{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 1rem;
+    margin: 10px 0;
+    width: 80%;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero .content h2 span{
+    text-transform: uppercase;
+    color: #28DF99;
+}
+.hero .content h1,
+.about .content h1{
+    font-size: 4rem;
+    letter-spacing: 1px;
+    line-height: 5rem;
+    margin: 10px 0;
+    width: 80%;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero .content h1 span{
+    color: #28DF99;
+}
+
+.hero .content p,
+.about .content p{
+    color: #878787;
+    margin: 10px 0;
+    width: 80%;
+}
+
+
+.hero .image-wrapper,
+.about .image-wrapper{
+    height: 100%;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#heroImage{
+    width: 440px;
+    height: 440px; 
+    border-radius: 50%; 
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.8)); 
+    object-fit: center;
+}
+
+svg{
+    height: 600px;
+    position: absolute;
+    top: 6%;
+    left: 3%;
+    z-index: -1;
+    filter: drop-shadow(0px 0px 80px #99f3bd5f);
+    
+} 
+
+
+.svg2{
+    height: 700px;
+    top: 7%;
+    left: 0%;
+    animation: blobanim1 ;
+}
+
+
+button{
+    height: 40px;
+    width: 135px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #28DF99;
+    border: 1px solid #28DF99;
+    box-shadow: 0 0 10px #99F3BD;
+    margin-top: 20px;
+    transition: .6s;
+}
+button:hover{   
+    box-shadow: 0 0 5px #28DF99;
+}
+
+.social{
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 2px;
+    
+}
+.social i{
+    padding: 9px;
+    background-color: #28DF99;
+    border-radius: 5px;
+    border: 0.5px solid #28DF99;
+    box-shadow: 0 0 5px #28DF99;
+    transition: .6s;
+    cursor: pointer;
+}
+.social i:hover{
+    box-shadow: 0px 0px 10px #99F3BD;
+    
+}
+
+
+.about{
+    background-color: #262424;
+}
+
+.section_heading{
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+.section_title{
+    font-size: 12px;
+    color: #28DF99;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+
+.service,.project{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 8%;
+    color: #fff;
+    background-color: #262424;
+}
+
+.service_cards,.project_cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    place-items: center;
+    margin-top: 50px;
+}
+
+.service_cards .service_card{
+    background-color: rgba(188, 248, 212, 0.02);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 400px;
+    padding:10% 20px ;
+    border-radius: 10px;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+    border: 0.2px solid rgba(188, 248, 212, 0.2);
+    transition: .6s;
+}
+.service_cards .service_card:hover{
+    border-color: rgba(188, 248, 212, 0.2);
+    background-color: rgba(188, 248, 212, 0.08);
+    
+
+}
+
+.service_cards .service_card > div{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    position: relative;
+}
+
+.service_cards .service_card:hover > div{
+    border-color: #28DF99;
+}
+
+.service_cards .service_card > div i{
+    font-size: 25px;
+    color:#fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1.5s;
+
+}
+
+.service_cards .service_card:hover > div i{
+    color: #28DF99;
+}
+
+.service_cards .service_card p{
+    color: rgba(128, 128, 128, 0.8);
+}
+
+.service_cards .service_card button{
+    height: 55px;
+}
+
+/* skils section  */
+
+.skills{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    padding: 80px 8%;
+    background-color: #262424;
+}
+
+.skills_wrapper{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.technical_skills{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: #fff;
+    width: 50%;
+    margin-top: 80px;
+}
+
+.skills .section_heading{
+    color: #fff;
+}
+
+
+.technical_skills h3{
+    font-size: 26px;
+}
+.technical_skills .skils{
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+.technical_skills .skils h3{
+    font-size: 16px;
+}
+
+.technical_skills .skils h3 span{
+    color: #28DF99;
+}
+
+.technical_skills .skils .line{
+    height: 8px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 8px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.technical_skills .skils .line:after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 50%;
+    background: rgba(40, 223, 153, 1);
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.technical_skills .skils .HTML .line:after{
+    width: 90%;
+}
+.technical_skills .skils .CSS3 .line:after{
+    width: 80%;
+}
+.technical_skills .skils .Javascript .line:after{
+    width: 65%;
+}
+.technical_skills .skils .REACT .line:after{
+    width: 54%;
+}
+
+
+.Professional_skills{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.Professional_skills h3{
+    margin-top: 60px;
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.Professional_skills .boxes{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    color: #fff;
+}
+
+.Professional_skills .boxes .box{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    border-radius: 50%;
+    border: 10px solid #28DF99;
+    text-align: center;
+}
+.Professional_skills .boxes .box span{
+    font-size: 13px;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 8%;
+    color: #fff;
+    background-color: #262424;
+}
+
+.project_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    place-items: center;
+    margin-top: 50px;
+}
+
+.project_card {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #28DF99;
+    box-shadow: 0 0 12px #99F3BD;
+    transition: .6s;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project_card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .6s;
+}
+
+.project_card:hover:after {
+    opacity: 1;
+}
+
+.project_card img {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    transition: .6s;
+}
+
+.project_card p {
+    position: absolute;
+    bottom: 30px;
+    right: -18px;
+    padding: 5px 20px;
+    width: 120px;
+    background-color: rgba(40, 223, 153, 1);
+    border: 2px solid #28DF99;
+    transform-origin: right;
+    transition: .6s;
+    transform: rotate(100deg);
+    color: #000;
+    z-index: 5;
+    font-weight: 500;
+}
+
+.project_card:hover p {
+    transform: rotate(0deg);
+}
+
+.project_card:hover img {
+    transform: scale(1.05);
+}
+
+
+.pop {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: visibility 0s, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.project_card:hover .pop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pop img {
+    border-radius: 6px;
+    width: 65%;
+    transition: transform 0.6s;
+}
+
+.project_card:hover .pop img {
+    transform: scale(1.1) rotate(360deg);
+}
+
+
+.top-container{
+    min-height: 30vh;
+    width: 100%;
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 35%;
+    color: #fff;
+    font-family: 'karma';
+    border-bottom: 0.5px solid #28DF99;
+}
+
+.top-container h1{
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+.top-container p{
+    width: 60%;
+    text-align: center;
+}
+
+.bottom-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 4% 8%;
+    min-height: 70vh;
+    width: 100%;
+    background-color:#262424;
+}
+
+
+.bottom-container .contact{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 30%;
+    height: 100%;
+}
+
+
+.bottom-container .image{
+    height: 350px;
+    width: 350px;
+    margin-top: -180px;
+}
+
+.bottom-container .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.bottom-container .contact h4{
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.bottom-container .contact h3{
+    color: rgba(255, 255, 255, 1);
+    
+    letter-spacing: 1px;
+}
+
+.bottom-container .form{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0 2%;
+}
+
+.box-wrapper{
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+label{
+    color: #fff;
+}
+
+input,textarea{
+    height: 42px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding-left: 12px !important;
+    outline: none;
+    color: #fff;
+
+}
+
+input:focus,textarea:focus{
+    border-color: #99F3BD;
+}
+textarea{
+    height: 200px;
+    padding-top: 5px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer p{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 12px 0;
+}
+
+
+
+@media(max-width:1200px){
+    .cover{
+        display: none;
+    }
+    .header .fa-bars{
+        display: block;
+    }
+    .header ul{
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        border-bottom: 2px solid var(--primery-color);
+        width: 100%;
+        background-color: #1c1c1c;
+        opacity: 0;
+        transition: .6s;
+    }   
+    .header ul li{
+        display: block;
+        margin: 10px 0;
+        padding: 10px 0;
+        padding-left: 8px;
+       
+    }
+    .header ul li a{
+        color: #28DF99;
+
+    }
+    .header .show{
+        opacity: 1;
+    }
+    .header .hide{
+        display: none;
+    }
+    .hero{
+        height: auto;
+        flex-direction: column-reverse;
+        align-items: center;
+        
+    }
+    .about{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero .content,.about .content{
+        width: 100%;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        align-items: center;
+        text-align: center;
+    }
+    .bottom-container .image{
+        height: 260px;
+        width: 255px;
+        margin-bottom: 20px;
+    }
+    .Professional_skills{
+        width: 100%;
+    }
+}
+
+@media(max-width:900px){
+     svg {
+        width:100%;
+     }
+    .service_cards
+    ,.project_cards
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .bottom-container{
+        flex-direction: column;
+    }
+    .top-container{
+        padding-left: 8%;
+    }
+    .bottom-container .image{
+        margin: 0;
+        height: 300px;
+        width: 285px;
+        margin-bottom: 20px;
+    }
+    .bottom-container .contact{
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 50px;
+    }
+    .wrapper{
+        padding: 0 20px;
+    }
+    .bottom-container .form{
+        width: 100%;
+    }
+    .skills_wrapper{
+        flex-direction: column;
+    }
+    .technical_skills{
+        width: 100%;
+    }
+    .Professional_skills .boxes .box {
+        height: 250px;
+        width: 250px;
+    }
+    .svg2{
+        width: 100%;
+    }   
+}
+
+@media(max-width:768px){
+    /* svg {
+        width: 600px;
+        top: 13%;
+        left: -35%;
+    } */
+    .hero .content h1,
+    .about .content h1 {
+        font-size: 3.8rem;
+    }
+    .service_cards
+    ,.project_cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .bottom-container .contact{
+        flex-direction: column;
+    }
+    .bottom-container .image{
+        height: 100%;
+        width: 100%;
+    }
+    .Professional_skills .boxes .box {
+        height: 220px;
+        width: 220px;
+    }
+    .hero .image-wrapper, .about .image-wrapper{
+        width: 100%;
+    }
+    .service_cards .service_card {
+        height: 410px;        
+    }   
+}
+
+
+@media(max-width:500px){
+    #heroImage {
+        width: 370px;
+    }
+    svg {
+        left: -17%;
+    top: -50px;
+    width: 100%;
+    }
+    .hero .content h1,
+    .about .content h1  {
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+    }
+    .about,.hero{
+        align-items: center;
+    }
+
+    .top-container h1{
+        font-size: 30px;
+    }
+    .top-container p{
+        width: 80%;
+    }
+
+    .Professional_skills .boxes .box {
+        height: 180px;
+        width: 180px;
+    }
+    .Professional_skills .boxes .box {
+        height: 140px;
+        width: 140px;
+    }
+    .section_heading {
+        font-size: 44px;
+    }
+    .top-container {
+    padding-left: 0%;
+    align-items: center;
+    text-align: center;
+}
+
+}
+
+@media(max-width:454px){
+    #heroImage {
+        width: 350px;
+    }
+    svg {
+         width: 100%;
+    left: -17%;
+    top: -50px;
+    }
+    .hero .content h1,
+    .about .content h1 {
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+    }
+    .hero .content h2{
+        font-size: 1rem;
+    }
+} 
+
+    </style>
+    <body>
+            <div class="container">
+                <div class="header">
+                    <div class="logo">
+                        <a href="#">Port<span>folio</span></a>
+                    </div>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+
+                        <li><a href="#project">project</a></li>
+                        <li><a href="#skills">skills</a></li>
+                        
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <i class="fa fa-bars"></i>
+                </div>
+                <section id="home">
+                <div class="hero">
+                    <div class="content">
+                        <h4>Welcome</h4>
+                        <h1>Hello <span id="Shakehand">👋</span> I am<span> Mohammed Arsath</span></h1>
+                        <h2>And I m <span>Full Stack Developer</span></h2>
+                        
+                        <div style="display: flex; gap: 20px; align-items: end;">
+                            <div class="resume">
+                                <a href="https://drive.google.com/uc?export=download&id=1sLR0eZDv37yYmDdru3Bok6RI6U_x1K7_
+                                " download><button>Download</button></a>
+                            </div>
+                            
+                            <div class="social">
+                                <a href="https://www.facebook.com/" target="_blank">  <i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/accounts/login/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                <a href=https://www.linkedin.com/in/mdarsath target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://x.com/login?mx=2" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-wrapper">
+                            <img src="./images/image.png"id="heroImage">
+                            
+                            
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+                    <section id="about">
+                        <div class="about">
+                            <div class="image-wrapper">
+                                 
+                
+                                <img src="./images/image.png"alt="" id="heroImage">
+                            </div>
+                    <div class="content">
+                        
+                        <h4>Let Me Introduce my self</h4>
+                        <h1>About me</h1>
+                        <p>Hello, I'm Mohammed Arsath, a recent B.E graduate in Mechanical Engineering with a strong passion for technology, innovation, and problem-solving.I am excited to embark on my journey in the IT industry, where I aim to contribute to impactful projects, collaborate with like-minded professionals, and continuously evolve in a dynamic environment. My goals are to develop a deep understanding of AI and machine learning, build meaningful connections, and stay ahead of the curve by embracing the latest industry trends.</p>
+                       
+                            <button>Read more</button>
+                      
+                    </div>
+                        </div>
+                        
+                </div>
+                <section id="skills">
+                <div class="skills">
+                    <p class="section_title">Take a Look</p>
+                    <h3 class="section_heading">My Skils</h3>
+                    <div class="skills_wrapper">
+                        <div class="technical_skills">
+                            <h3>Technical skills</h3>
+                            <div class="skils">
+                                <div class="skil_name Python">
+                                    <h3>PYTHON <span>80%</span></h3>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="skil_name HTML">
+                                    <h3>HTML5 <span>90%</span></h3>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="skil_name CSS3">
+                                    <h3>CSS3 <span>80%</span></h3>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="skil_name Javascript">
+                                    <h3>Javascript <span>65%</span></h3>
+                                    <div class="line"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="Professional_skills">
+                            <h3>Professional skills</h3>
+                            <div class="boxes">
+                                <div class="box">
+                                    <span>90%</span> <span>Team Work</span>
+                                    <div class="ring"></div>
+                                </div>
+                                <div class="box">
+                                    <span>50%</span> <span>Creativity</span>
+                                    <div class="ring"></div>
+                                </div>
+                                <div class="box">
+                                    <span>80%</span> <span>Project Management</span>
+                                    <div class="ring"></div>
+                                </div>
+                                <div class="box">
+                                    <span>60%</span> <span>Comiunication</span>
+                                    <div class="ring"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section id="project">
+                <div class="project">
+                    <p class="section_title">Take a Look</p>
+                    <h3 class="section_heading">Latest Projects</h3>
+                    <div class="project_cards">
+                        <div class="project_card">
+                            <img src="./images/e-commerce.jpeg"alt="Project 1" />
+                            <p>E-Commerce Website</p>
+                            <div class="pop">
+                                <img src="./images/e-commerce.jpeg" alt="Popup 1" />
+                            </div>
+                        </div>
+                        <div class="project_card">
+                            <img src="./images/sales.jpeg"alt="Project 2" />
+                            <p>Sales-Insight</p>
+                            <div class="pop">
+                                <img src="./images/sales.jpeg"alt="Popup 2" />
+                            </div>
+                        </div>
+                        <div class="project_card">
+                            <img src="./images/management.jpeg"alt="Project 3" />
+                            <p>Student Management Database</p>
+                            <div class="pop">
+                                <img src="./images/management.jpeg" alt="Popup 3" />
+                            </div>
+                        </div> 
+                        <div class="project_card">
+                            <img src="./images/logo.png"alt="Project 3" />
+                            <p>Student Management Database</p>
+                            <div class="pop">
+                                <img src="./images/logo.png"alt="Popup 3" />
+                            </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                    </div>
+                </div>
+                
+                </div>
+                </div>
+               <section id="contact">
+                <div class="contact">
+                    <div>
+                       
+                        <div class="bottom-container">
+                            <div class="contact">
+                                
+                                <div class="wrapper">
+                                    <div class="contact-wrapper">
+                                        <h4>Write an E-mail</h4>
+                                        <h3>mohammedarsath1793@gmail.com</h3>
+                                    </div>
+                                    <div class="contact-wrapper">
+                                        <h4>Write a Phone</h4>
+                                        <h3>9677384046</h3>
+                                    </div>
+                                    <div class="social">
+                                        <div class="icon">
+                                            <a href="https://www.linkedin.com/in/mdarsath" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form">
+                                <div class="box-wrapper">
+                                    <div class="box">
+                                        <label for="first-name">First Name</label>
+                                        <input type="text" id="first-name" placeholder="Name*" required>
+                                    </div>
+                                    <div class="box">
+                                        <label for="email">Your Email</label>
+                                        <input type="email" id="email" placeholder="Email*" required>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" placeholder="Subject*" required>
+                                </div>
+                                <div class="box">
+                                    <label for="message">Your Message</label>
+                                    <textarea id="message" cols="30" rows="10" placeholder="Your Message*" required></textarea>
+                                </div>
+                                <button onclick="sendEmail()">Send Message</button>
+                            </div>
+                            
+                            <script>
+                                function sendEmail() {
+                                    let name = encodeURIComponent(document.getElementById("first-name").value);
+                                    let userEmail = encodeURIComponent(document.getElementById("email").value);
+                                    let subject = encodeURIComponent(document.getElementById("subject").value);
+                                    let message = encodeURIComponent(document.getElementById("message").value);
+                            
+                                    let email = "mohammedarsath1793@gmail.com"; // Recipient email
+                            
+                                    let gmailLink = `https://mail.google.com/mail/?view=cm&to=${email}&su=${subject}&body=Name:%20${name}%0AEmail:%20${userEmail}%0A%0A${message}`;
+                            
+                                    window.open(gmailLink, "_blank"); // Opens Gmail in a new tab
+                                }
+                            </script>
+                               
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>copyright @myportfolio 2024</p>
+                </div>
+            </div>
+            <script>
+                    let menu = document.querySelector("ul");
+        
+                    let bars = document.querySelector(".header .fa-bars");
+        
+                    bars.addEventListener("click", function () {
+                        menu.classList.toggle("show");
+                    })
+        
+            </script>
+        </body>
+        </html>
+    </body>
+
+</html> 
